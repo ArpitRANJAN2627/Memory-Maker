@@ -1,0 +1,27 @@
+<%- include('./partials/header')  %> 
+
+<div class="border p-3 my-3  mx-auto w-50">
+    <h1>Add Memory</h1>
+    <form action="/add"  method="post" enctype="multipart/form-data">
+
+       
+        <div class="mb-3">
+          
+            <label for="img" class="form-label">Upload Image </label>
+            <input type="file" class="form-control " name="imgUrl" id="img">
+        </div>    
+        
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text"  class="form-control" name="title" id="title">
+        </div>    
+        <div class="mb-3">
+            <label for="des" class="form-label">Description</label>
+            <textarea class="form-control" name="des" id="des" rows="3"></textarea>
+        </div> 
+        <button type="submit" class="btn btn-success btn-sm">Add</button>
+    </form>
+</div>
+
+<%- include('./partials/footer')  %> 
+

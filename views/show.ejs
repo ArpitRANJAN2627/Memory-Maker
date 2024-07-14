@@ -1,0 +1,26 @@
+<%- include('./partials/header')  %> 
+
+
+
+<div class="container  border vw-100 my-3">
+
+  <h2 class="text-capitalize text-center"><%= image.title %> </h2>
+    
+   
+    <img src="<%=image.imgUrl%>" class="d-block mx-auto img-fluid rounded show-img" alt="This is a image" > 
+
+    <p class="text-break text mt-lg-3 ml-3 mt-md-2 w-75  "><%= image.des %></image></p>
+   
+    <a href="/item/edit/<%= image._id %>" class="btn my-1 btn-md-sm btn-success mx-2 d-inline-block">Edit</a>
+
+  
+    <form action="/item/<%= image._id %>?_method=DELETE" method="post" class="d-inline-block my-1 mx-md-2 btn-md-sm"> 
+    <button class="btn btn-md-sm btn-danger ">Delete</button>
+</form>
+</div>
+
+
+
+
+
+<%- include('./partials/footer')  %> 

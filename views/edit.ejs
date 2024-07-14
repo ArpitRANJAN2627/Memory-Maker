@@ -1,0 +1,28 @@
+<%- include('./partials/header')  %> 
+
+
+
+<div class="border p-3 my-3  mx-auto w-50">
+    <h1>Edit Memory</h1>
+   
+    <form action="/item/edit/<%= image._id %>?_method=PATCH"  method="post">
+
+        <div class="mb-3">
+            <label for="img" class="form-label">Image Url</label>
+            <input type="text" disabled class="form-control" name="imgUrl" id="img" value="<%= image.imgUrl %>">
+        </div>    
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" id="title" value="<%= image.title %>">
+        </div>    
+        <div class="mb-3">
+            <label for="des" class="form-label">Description</label>
+            <textarea class="form-control" name="des" id="des" rows="3" ><%= image.des %></textarea>
+        </div> 
+        <button type="submit" class="btn btn-success btn-sm">Submit</button>
+    </form>
+</div>
+
+
+
+<%- include('./partials/footer')  %> 
